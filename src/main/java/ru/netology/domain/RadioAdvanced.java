@@ -47,7 +47,7 @@ public class RadioAdvanced {
         }
     }
 
-    public void decreaseVolume() { //
+    public void decreaseVolume() {
         if (currentVolume > minVolume) {
             currentVolume = currentVolume - 1;
         } else {
@@ -60,6 +60,7 @@ public class RadioAdvanced {
     }
 
     public int getMaxStation() {
+        maxStation = currentNumberStation - 1;
         return maxStation;
     }
 

@@ -7,6 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioAdvancedTest {
 
     @Test
+    public void shouldSetMaxStation() {
+        RadioAdvanced radio = new RadioAdvanced(15);
+
+        assertEquals(14, radio.getMaxStation());
+    }
+
+    @Test
     public void shouldCurrentNumberStation() {
         RadioAdvanced radio = new RadioAdvanced(10);
 
