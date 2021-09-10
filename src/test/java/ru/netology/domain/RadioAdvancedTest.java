@@ -6,21 +6,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RadioAdvancedTest {
 
-    @Test
+    @Test // изменение номера максимальной станции от изменения количества станций
     public void shouldSetMaxStation() {
         RadioAdvanced radio = new RadioAdvanced(15);
 
         assertEquals(14, radio.getMaxStation());
     }
 
-    @Test
+    @Test // установка количества радиостанций через конструктор
     public void shouldCurrentNumberStation() {
         RadioAdvanced radio = new RadioAdvanced(10);
 
         assertEquals(10, radio.getCurrentNumberStation());
     }
 
-    @Test
+    @Test // количество радиостанций по умолчанию
     public void shouldCurrentNumberStationDefault() {
         RadioAdvanced radio = new RadioAdvanced();
         radio.setCurrentNumberStation(10);
