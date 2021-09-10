@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RadioAdvancedTest {
 
-    @Test // изменение номера максимальной станции от изменения количества станций
+    @Test // зависимость номера максимальной станции от количества станций
     public void shouldSetMaxStation() {
         RadioAdvanced radio = new RadioAdvanced(15);
 
