@@ -7,10 +7,29 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioAdvancedTest {
 
     @Test // зависимость номера максимальной станции от количества станций
-    public void shouldSetMaxStation() {
-        RadioAdvanced radio = new RadioAdvanced(15);
+    public void shouldSetMaxStationCurrentNum20() {
+        RadioAdvanced radio = new RadioAdvanced(20);
+        radio.setMaxStation();
 
-        assertEquals(14, radio.getMaxStation());
+        assertEquals(19, radio.getMaxStation());
+    }
+
+    @Test // создайте радио с 20 станциями и попытайтесь сеттером выставить станцию номер 15
+    public void shouldSetStation15CurrentNum20() {
+        RadioAdvanced radio = new RadioAdvanced(20);
+        radio.setMaxStation();
+        radio.setCurrentStation(15);
+
+        assertEquals(15, radio.getCurrentStation());
+    }
+
+    @Test // метод станция после максимальной через конструктор
+    public void shouldSetStationOverCurrentNum() {
+        RadioAdvanced radio = new RadioAdvanced(20);
+        radio.setMaxStation();
+        radio.setCurrentStation(20);
+
+        assertEquals(0, radio.getCurrentStation());
     }
 
     @Test // установка количества радиостанций через конструктор

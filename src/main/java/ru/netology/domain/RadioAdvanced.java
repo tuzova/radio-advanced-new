@@ -59,8 +59,12 @@ public class RadioAdvanced {
         return minStation;
     }
 
-    public int getMaxStation() {
+    public int setMaxStation() {
         maxStation = currentNumberStation - 1;
+        return maxStation;
+    }
+
+    public int getMaxStation() {
         return maxStation;
     }
 
